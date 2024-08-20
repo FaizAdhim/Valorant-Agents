@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <script src="script.js"></script>
     <video autoplay muted loop id="background-video">
         <source src="video/Y2meta.app-VALORANT - Live Background (AnimatedHD).mp4" type="video/mp4">
     </video>
@@ -51,7 +52,7 @@
     <audio id="sound24" src="voice/CLVE.mp3" preload="auto"></audio>
 
   <div class="container">
-    <h1>SELECT YOUR VALORANT AGENT</h1>
+    <h1>CHOOSE YOUR VALORANT AGENT</h1>
     <div class="character-display">
       <img id="main-character" src="images/BRIM.png" alt="Main Character">
     </div>
@@ -82,6 +83,13 @@
       <img src="images/CLVEPP.png" id="CLVE" onclick="changeCharacter('images/CLVE.png')">
     </div>
   </div>
-  <script src="script.js"></script>
+  <a href="https://playvalorant.com/id-id/download/" target="_blank">
+    <button class="start-button">
+      START
+      <div class="play-icon-container">
+          <span class="play-icon">▶</span>
+      </div>
+    </button>
+  </a>
 </body>
 </html>

@@ -17,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden; /* Menghindari scrollbar */
-    font-family: 'impact', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-image: url('images/BG.jpg'); /* Gambar background */
     background-size: cover; /* Memastikan gambar memenuhi layar */
     background-position: center; /* Memusatkan gambar */
@@ -229,9 +229,51 @@ body {
     transition: background-color 0.2s ease;
   }
   
+  .start-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #fd4556; /* Warna background merah */
+    color: #fffbf5; /* Warna tulisan putih */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s, border-color 0.3s
+}
+
+.play-icon-container {
+    background-color: #fffbf5; /* Latar belakang putih untuk ikon */
+    border-radius: 50%; /* Membuat bentuk bulat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    margin-left: 8px; /* Jarak antara teks dan ikon play */
+}
+
+.play-icon {
+    color: #fd4556; /* Warna ikon merah */
+    font-size: 16px; /* Ukuran ikon play */
+}
+
+.start-button:hover {
+  transform: scale(1.1);
+}
+
   @media (max-width: 768px) {
     #background-video {
       left: 59%;
+    }
+
+    body {
+      overflow: visible;
     }
 
     h1 {
@@ -267,11 +309,19 @@ body {
       height: 70px;
     }
   
+    .start-button {
+      position: absolute;
+      bottom: 73px; /* Sesuaikan jarak dari bawah */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+
     #music-controls {
       position: absolute;
       bottom: 10px; /* Sesuaikan jarak dari bawah */
       left:auto;
-      width: calc(100% - 60px); /* Lebar kontrol musik agar sesuai dengan layar */
+      width: calc(100% - 100px); /* Lebar kontrol musik agar sesuai dengan layar */
       justify-content: space-between; /* Tempatkan kontrol musik di ujung kiri dan kanan */
     }
   

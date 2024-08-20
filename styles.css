@@ -292,7 +292,7 @@
     h1 {
       margin-bottom: 20px;
       margin-top: 20px;
-      font-size: 18px; /* Ukuran font */
+      font-size: 20px; /* Ukuran font */
       font-weight: bold; /* Ketebalan font */
       letter-spacing: 2px; /* Jarak antar huruf */
       color: #fff;
@@ -303,13 +303,13 @@
       width: 700px; /* Sesuaikan lebar gambar karakter utama agar sesuai dengan layar */
       height: auto; /* Pertahankan rasio aspek gambar */
       top: 20px;
-      left: -490px; /* Atur posisi gambar karakter utama ke tengah */
+      left: -500px; /* Atur posisi gambar karakter utama ke tengah */
       transform: none; /* Hapus transformasi */
     }
   
     #character-name {
-      top: 437px; /* Menyesuaikan jarak di atas ikon */
-      left: -123px;
+      top: 478px; /* Menyesuaikan jarak di atas ikon */
+      left: -130px;
     }
 
     .character-icons {

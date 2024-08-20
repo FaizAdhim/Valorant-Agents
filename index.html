@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VALORANT AGENTS</title>
-  <link rel="icon" type="image/png" href="valorant.png">
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT AGENTS</title>
+    <link rel="icon" type="image/png" href="valorant.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
 
-<body>
-  <script src="script.js"></script>
+  <body>
+    <script src="script.js"></script>
+
     <video autoplay muted loop id="background-video">
-        <source src="video/Y2meta.app-VALORANT - Live Background (AnimatedHD).mp4" type="video/mp4">
+      <source src="video/Y2meta.app-VALORANT - Live Background (AnimatedHD).mp4" type="video/mp4">
     </video>
-
 
     <audio id="intro-sound" src="music/intro.mp3" preload="auto"></audio>
 
     <div id="music-controls">
-        <div id="play-pause-btn" class="play"></div>
-        <input type="range" id="progress-bar" value="0" min="0" max="100" step="1">
+      <div id="play-pause-btn" class="play"></div>
+      <input type="range" id="progress-bar" value="0" min="0" max="100" step="1">
     </div>
 
     <audio id="background-music" controls autoplay loop preload="auto">
-        <source src="music/song.mp3" type="audio/mpeg">
+      <source src="music/song.mp3" type="audio/mpeg">
     </audio>
 
     <audio id="sound1" src="voice/BRIM.mp3" preload="auto"></audio>
@@ -51,45 +51,47 @@
     <audio id="sound23" src="voice/ISO.mp3" preload="auto"></audio>
     <audio id="sound24" src="voice/CLVE.mp3" preload="auto"></audio>
 
-  <div class="container">
-    <h1>CHOOSE YOUR VALORANT AGENT</h1>
-    <div class="character-display">
-      <img id="main-character" src="images/BRIM.png" alt="Main Character">
-    </div>
-    <div class="character-icons">
-      <img src="images/BRIMPP.png" id="BRIM" onclick="changeCharacter('images/BRIM.png')">
-      <img src="images/PHNXPP.png" id="PHNX" onclick="changeCharacter('images/PHNX.png')">
-      <img src="images/SAGEPP.png" id="SAGE" onclick="changeCharacter('images/SAGE.png')">
-      <img src="images/SOVAPP.png" id="SOVA" onclick="changeCharacter('images/SOVA.png')">
-      <img src="images/VIPERPP.png" id="VIPER" onclick="changeCharacter('images/VIPER.png')">
-      <img src="images/CYPHPP.png" id="CYPH" onclick="changeCharacter('images/CYPH.png')">
-      <img src="images/REYNAPP.png" id="REYNA" onclick="changeCharacter('images/REYNA.png')">
-      <img src="images/KILLPP.png" id="KILL" onclick="changeCharacter('images/KILL.png')">
-      <img src="images/BRCHPP.png" id="BRCH" onclick="changeCharacter('images/BRCH.png')">
-      <img src="images/OMENPP.png" id="OMEN" onclick="changeCharacter('images/OMEN.png')">
-      <img src="images/JETTPP.png" id="JETT" onclick="changeCharacter('images/JETT.png')">
-      <img src="images/RAZEPP.png" id="RAZE" onclick="changeCharacter('images/RAZE.png')">
-      <img src="images/SKYEPP.png" id="SKYE" onclick="changeCharacter('images/SKYE.png')">
-      <img src="images/YORUPP.png" id="YORU" onclick="changeCharacter('images/YORU.png')">
-      <img src="images/ASTRAPP.png" id="ASTRA" onclick="changeCharacter('images/ASTRA.png')">
-      <img src="images/KAYOPP.png" id="KAYO" onclick="changeCharacter('images/KAYO.png')">
-      <img src="images/CHAMPP.png" id="CHAM" onclick="changeCharacter('images/CHAM.png')">
-      <img src="images/NEONPP.png" id="NEON" onclick="changeCharacter('images/NEON.png')">
-      <img src="images/FADEPP.png" id="FADE" onclick="changeCharacter('images/FADE.png')">
-      <img src="images/HRBRPP.png" id="HRBR" onclick="changeCharacter('images/HRBR.png')">
-      <img src="images/GEKKPP.png" id="GEKK" onclick="changeCharacter('images/GEKK.png')">
-      <img src="images/DLCKPP.png" id="DLCK" onclick="changeCharacter('images/DLCK.png')">
-      <img src="images/ISOPP.png" id="ISO" onclick="changeCharacter('images/ISO.png')">
-      <img src="images/CLVEPP.png" id="CLVE" onclick="changeCharacter('images/CLVE.png')">
-    </div>
-  </div>
-  <a href="https://playvalorant.com/id-id/download/" target="_blank">
-    <button class="start-button">
-      START
-      <div class="play-icon-container">
-          <span class="play-icon">▶</span>
+    <div class="container">
+      <h1>CHOOSE YOUR VALORANT AGENT</h1>
+      <div class="character-display">
+        <img id="main-character" src="images/BRIM.png" alt="Main Character">
+        <h2 id="character-name">BRIMSTONE</h2>
       </div>
-    </button>
-  </a>
-</body>
+      <div class="character-icons">
+        <img src="images/BRIMPP.png" id="BRIM" onclick="changeCharacter('images/BRIM.png', 'BRIMSTONE')">
+        <img src="images/PHNXPP.png" id="PHNX" onclick="changeCharacter('images/PHNX.png', 'PHOENIX')">
+        <img src="images/SAGEPP.png" id="SAGE" onclick="changeCharacter('images/SAGE.png', 'SAGE')">
+        <img src="images/SOVAPP.png" id="SOVA" onclick="changeCharacter('images/SOVA.png', 'SOVA')">
+        <img src="images/VIPERPP.png" id="VIPER" onclick="changeCharacter('images/VIPER.png', 'VIPER')">
+        <img src="images/CYPHPP.png" id="CYPH" onclick="changeCharacter('images/CYPH.png', 'CHYPER')">
+        <img src="images/REYNAPP.png" id="REYNA" onclick="changeCharacter('images/REYNA.png', 'REYNA')">
+        <img src="images/KILLPP.png" id="KILL" onclick="changeCharacter('images/KILL.png', 'KILLJOY')">
+        <img src="images/BRCHPP.png" id="BRCH" onclick="changeCharacter('images/BRCH.png', 'BREACH')">
+        <img src="images/OMENPP.png" id="OMEN" onclick="changeCharacter('images/OMEN.png', 'OMEN')">
+        <img src="images/JETTPP.png" id="JETT" onclick="changeCharacter('images/JETT.png', 'JETT')">
+        <img src="images/RAZEPP.png" id="RAZE" onclick="changeCharacter('images/RAZE.png', 'RAZE')">
+        <img src="images/SKYEPP.png" id="SKYE" onclick="changeCharacter('images/SKYE.png', 'SKYE')">
+        <img src="images/YORUPP.png" id="YORU" onclick="changeCharacter('images/YORU.png', 'YORU')">
+        <img src="images/ASTRAPP.png" id="ASTRA" onclick="changeCharacter('images/ASTRA.png', 'ASTRA')">
+        <img src="images/KAYOPP.png" id="KAYO" onclick="changeCharacter('images/KAYO.png', 'KAY/O')">
+        <img src="images/CHAMPP.png" id="CHAM" onclick="changeCharacter('images/CHAM.png', 'CHAMBER')">
+        <img src="images/NEONPP.png" id="NEON" onclick="changeCharacter('images/NEON.png', 'NEON')">
+        <img src="images/FADEPP.png" id="FADE" onclick="changeCharacter('images/FADE.png', 'FADE')">
+        <img src="images/HRBRPP.png" id="HRBR" onclick="changeCharacter('images/HRBR.png', 'HARBOR')">
+        <img src="images/GEKKPP.png" id="GEKK" onclick="changeCharacter('images/GEKK.png', 'GEKKO')">
+        <img src="images/DLCKPP.png" id="DLCK" onclick="changeCharacter('images/DLCK.png', 'DEADLOCK')">
+        <img src="images/ISOPP.png" id="ISO" onclick="changeCharacter('images/ISO.png', 'ISO')">
+        <img src="images/CLVEPP.png" id="CLVE" onclick="changeCharacter('images/CLVE.png', 'CLOVE')">
+      </div>
+    </div>
+
+    <a href="https://playvalorant.com/id-id/download/" target="_blank">
+      <button class="start-button">
+         START
+        <div class="play-icon-container">
+          <span class="play-icon">▶</span>
+        </div>
+      </button>
+    </a>
+  </body>
 </html>

@@ -13,7 +13,34 @@
   display: none; /* Sembunyikan elemen audio bawaan */
 }
 
-body {
+@keyframes glitch {
+  0% {
+    opacity: 1;
+    filter: none;
+  }
+  20% {
+    opacity: 0.8;
+    filter: hue-rotate(30deg);
+  }
+  40% {
+    opacity: 0.6;
+    filter: hue-rotate(-30deg);
+  }
+  60% {
+    opacity: 0.4;
+    filter: hue-rotate(30deg);
+  }
+  80% {
+    opacity: 0.2;
+    filter: hue-rotate(-30deg);
+  }
+  100% {
+    opacity: 1;
+    filter: none;
+  }
+}
+
+  body {
     margin: 0;
     padding: 0;
     overflow: hidden; /* Menghindari scrollbar */
@@ -26,8 +53,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    
+    height: 100vh;  
   }
   
   .container {
@@ -63,7 +89,28 @@ body {
     border-radius: 10px;
     transition: transform 0.5s;
   }
+
+  .glitch {
+    animation: glitch 0.3s linear 2; /* Durasi animasi glitch selama 0.3 detik, diputar 2 kali */
+  }
   
+  #character-name {
+    letter-spacing: 5px;
+    text-shadow: 
+    1px 1px 0px rgba(0, 0, 0, 0.4),   /* Bayangan ke kanan bawah */
+    -1px 1px 0px rgba(0, 0, 0, 0.4),  /* Bayangan ke kiri bawah */
+    1px -1px 0px rgba(0, 0, 0, 0.4),  /* Bayangan ke kanan atas */
+    -1px -1px 0px rgba(0, 0, 0, 0.4); /* Bayangan ke kiri atas */
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 437px; /* Menyesuaikan jarak di atas ikon */
+    left: -247px;
+    transform: translateX(-50%);
+    transition: transform 0.5s;
+  }
+
   .character-icons {
     position: absolute;
     bottom: 20px; /* Tempatkan di bagian bawah container */
@@ -107,41 +154,10 @@ body {
     cursor: pointer;
     border: 2px solid transparent;
     transition: transform 0.3s, border-color 0.3s;
-}
+  }
   
   .character-icons img:hover {
     transform: scale(1.1);
-}
-  
-  @keyframes glitch {
-    0% {
-      opacity: 1;
-      filter: none;
-    }
-    20% {
-      opacity: 0.8;
-      filter: hue-rotate(30deg);
-    }
-    40% {
-      opacity: 0.6;
-      filter: hue-rotate(-30deg);
-    }
-    60% {
-      opacity: 0.4;
-      filter: hue-rotate(30deg);
-    }
-    80% {
-      opacity: 0.2;
-      filter: hue-rotate(-30deg);
-    }
-    100% {
-      opacity: 1;
-      filter: none;
-    }
-  }
-  
-  .glitch {
-    animation: glitch 0.3s linear 2; /* Durasi animasi glitch selama 0.3 detik, diputar 2 kali */
   }
 
   #music-controls {
@@ -245,9 +261,9 @@ body {
     display: flex;
     align-items: center;
     transition: transform 0.3s, border-color 0.3s
-}
+  }
 
-.play-icon-container {
+  .play-icon-container {
     background-color: #fffbf5; /* Latar belakang putih untuk ikon */
     border-radius: 50%; /* Membuat bentuk bulat */
     display: flex;
@@ -256,16 +272,16 @@ body {
     width: 24px;
     height: 24px;
     margin-left: 8px; /* Jarak antara teks dan ikon play */
-}
+  }
 
-.play-icon {
+  .play-icon {
     color: #fd4556; /* Warna ikon merah */
     font-size: 16px; /* Ukuran ikon play */
-}
+  }
 
-.start-button:hover {
-  transform: scale(1.1);
-}
+  .start-button:hover {
+    transform: scale(1.1);
+  }
 
   @media (max-width: 768px) {
     #background-video {
@@ -294,6 +310,11 @@ body {
       transform: none; /* Hapus transformasi */
     }
   
+    #character-name {
+      top: 437px; /* Menyesuaikan jarak di atas ikon */
+      left: -130px;
+    }
+
     .character-icons {
       display: flex;
       flex-wrap: nowrap;
@@ -310,12 +331,8 @@ body {
     }
   
     .start-button {
-      position: absolute;
-      bottom: 73px; /* Sesuaikan jarak dari bawah */
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-  }
+      display: none;
+    }
 
     #music-controls {
       position: absolute;

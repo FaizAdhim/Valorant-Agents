@@ -1,19 +1,19 @@
-function changeCharacter(imageSrc) {
-    const mainCharacter = document.getElementById('main-character');
+function changeCharacter(imageSrc, characterName) {
+    const mainCharacter = document.querySelector('#main-character');
+    document.getElementById('character-name').textContent = characterName;
     
-    // Tambahkan kelas glitch untuk animasi
+    // Hapus kelas glitch jika ada sebelumnya
+     mainCharacter.classList.remove('glitch');
+
+    // Ganti gambar dengan karakter baru
+    mainCharacter.src = imageSrc;
+
+    // Paksa reflow (untuk mengulang animasi glitch)
+    void mainCharacter.offsetWidth;
+
+    // Tambahkan kelas glitch untuk memicu animasi
     mainCharacter.classList.add('glitch');
-  
-    // Ubah gambar setelah animasi glitch dimulai
-    setTimeout(() => {
-      mainCharacter.src = imageSrc;
-    }, 150); // Setengah dari durasi animasi glitch
-  
-    // Hapus kelas glitch setelah animasi selesai
-    setTimeout(() => {
-      mainCharacter.classList.remove('glitch');
-    }, 600); // Total durasi animasi glitch (0.3s * 2)
-  }
+}
 
   document.addEventListener("DOMContentLoaded", function () {
     const introSound = document.getElementById("intro-sound");

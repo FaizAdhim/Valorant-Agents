@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT AGENTS</title>
+    <link rel="icon" type="image/png" href="valorant.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=New+Amsterdam&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <script src="script.js"></script>
+
+    <video autoplay muted loop id="background-video">
+      <source src="video/Y2meta.app-VALORANT - Live Background (AnimatedHD).mp4" type="video/mp4">
+    </video>
+
+    <audio id="intro-sound" src="music/intro.mp3" preload="auto"></audio>
+
+    <div id="music-controls">
+      <div id="play-pause-btn" class="play"></div>
+      <input type="range" id="progress-bar" value="0" min="0" max="100" step="1">
+    </div>
+
+    <audio id="background-music" controls autoplay loop preload="auto">
+      <source src="music/song.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="sound1" src="voice/BRIM.mp3" preload="auto"></audio>
+    <audio id="sound2" src="voice/PHNX.mp3" preload="auto"></audio>
+    <audio id="sound3" src="voice/SAGE.mp3" preload="auto"></audio>
+    <audio id="sound4" src="voice/SOVA.mp3" preload="auto"></audio>
+    <audio id="sound5" src="voice/VIPER.mp3" preload="auto"></audio>
+    <audio id="sound6" src="voice/CYPH.mp3" preload="auto"></audio>
+    <audio id="sound7" src="voice/REYNA.mp3" preload="auto"></audio>
+    <audio id="sound8" src="voice/KILL.mp3" preload="auto"></audio>
+    <audio id="sound9" src="voice/BRCH.mp3" preload="auto"></audio>
+    <audio id="sound10" src="voice/OMEN.mp3" preload="auto"></audio>
+    <audio id="sound11" src="voice/JETT.mp3" preload="auto"></audio>
+    <audio id="sound12" src="voice/RAZE.mp3" preload="auto"></audio>
+    <audio id="sound13" src="voice/SKYE.mp3" preload="auto"></audio>
+    <audio id="sound14" src="voice/YORU.mp3" preload="auto"></audio>
+    <audio id="sound15" src="voice/ASTRA.mp3" preload="auto"></audio>
+    <audio id="sound16" src="voice/KAYO.mp3" preload="auto"></audio>
+    <audio id="sound17" src="voice/CHAM.mp3" preload="auto"></audio>
+    <audio id="sound18" src="voice/NEON.mp3" preload="auto"></audio>
+    <audio id="sound19" src="voice/FADE.mp3" preload="auto"></audio>
+    <audio id="sound20" src="voice/HRBR.mp3" preload="auto"></audio>
+    <audio id="sound21" src="voice/GEKK.mp3" preload="auto"></audio>
+    <audio id="sound22" src="voice/DLCK.mp3" preload="auto"></audio>
+    <audio id="sound23" src="voice/ISO.mp3" preload="auto"></audio>
+    <audio id="sound24" src="voice/CLVE.mp3" preload="auto"></audio>
+    <audio id="sound25" src="voice/VYSE.mp3" preload="auto"></audio>
+
+    <div class="container">
+      <h1>CHOOSE YOUR VALORANT AGENT</h1>
+      <div class="character-display">
+        <img id="main-character" src="images/BRIM.png" alt="Main Character">
+        <h2 id="character-name">BRIMSTONE</h2>
+      </div>
+      <div class="character-icons">
+        <img src="images/BRIMPP.png" id="BRIM" onclick="changeCharacter('images/BRIM.png', 'BRIMSTONE')">
+        <img src="images/PHNXPP.png" id="PHNX" onclick="changeCharacter('images/PHNX.png', 'PHOENIX')">
+        <img src="images/SAGEPP.png" id="SAGE" onclick="changeCharacter('images/SAGE.png', 'SAGE')">
+        <img src="images/SOVAPP.png" id="SOVA" onclick="changeCharacter('images/SOVA.png', 'SOVA')">
+        <img src="images/VIPERPP.png" id="VIPER" onclick="changeCharacter('images/VIPER.png', 'VIPER')">
+        <img src="images/CYPHPP.png" id="CYPH" onclick="changeCharacter('images/CYPH.png', 'CHYPER')">
+        <img src="images/REYNAPP.png" id="REYNA" onclick="changeCharacter('images/REYNA.png', 'REYNA')">
+        <img src="images/KILLPP.png" id="KILL" onclick="changeCharacter('images/KILL.png', 'KILLJOY')">
+        <img src="images/BRCHPP.png" id="BRCH" onclick="changeCharacter('images/BRCH.png', 'BREACH')">
+        <img src="images/OMENPP.png" id="OMEN" onclick="changeCharacter('images/OMEN.png', 'OMEN')">
+        <img src="images/JETTPP.png" id="JETT" onclick="changeCharacter('images/JETT.png', 'JETT')">
+        <img src="images/RAZEPP.png" id="RAZE" onclick="changeCharacter('images/RAZE.png', 'RAZE')">
+        <img src="images/SKYEPP.png" id="SKYE" onclick="changeCharacter('images/SKYE.png', 'SKYE')">
+        <img src="images/YORUPP.png" id="YORU" onclick="changeCharacter('images/YORU.png', 'YORU')">
+        <img src="images/ASTRAPP.png" id="ASTRA" onclick="changeCharacter('images/ASTRA.png', 'ASTRA')">
+        <img src="images/KAYOPP.png" id="KAYO" onclick="changeCharacter('images/KAYO.png', 'KAY/O')">
+        <img src="images/CHAMPP.png" id="CHAM" onclick="changeCharacter('images/CHAM.png', 'CHAMBER')">
+        <img src="images/NEONPP.png" id="NEON" onclick="changeCharacter('images/NEON.png', 'NEON')">
+        <img src="images/FADEPP.png" id="FADE" onclick="changeCharacter('images/FADE.png', 'FADE')">
+        <img src="images/HRBRPP.png" id="HRBR" onclick="changeCharacter('images/HRBR.png', 'HARBOR')">
+        <img src="images/GEKKPP.png" id="GEKK" onclick="changeCharacter('images/GEKK.png', 'GEKKO')">
+        <img src="images/DLCKPP.png" id="DLCK" onclick="changeCharacter('images/DLCK.png', 'DEADLOCK')">
+        <img src="images/ISOPP.png" id="ISO" onclick="changeCharacter('images/ISO.png', 'ISO')">
+        <img src="images/CLVEPP.png" id="CLVE" onclick="changeCharacter('images/CLVE.png', 'CLOVE')">
+        <img src="images/VYSEPP.png" id="VYSE" onclick="changeCharacter('images/VYSE.png', 'VYSE')">
+      </div>
+    </div>
+
+    <a href="https://playvalorant.com/id-id/download/" target="_blank">
+      <button class="start-button">
+         START
+        <div class="play-icon-container">
+          <span class="play-icon">▶</span>
+        </div>
+      </button>
+    </a>
+  </body>
+</html>
